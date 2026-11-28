@@ -1,0 +1,11 @@
+'use client';
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { ArrowRight } from 'lucide-react';
+/**
+ * Reusable orange gradient hero banner (Figma: "Previous Year's Question" /
+ * "Cover Page Generator" strips) with a "Click Here" circular CTA.
+ */
+export function HeroBanner({ title, subtitle, visual, onClick, href, }) {
+    const CTA = (_jsxs("button", { type: "button", onClick: onClick, "aria-label": `${title} — click here`, className: "group relative flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-cov-orange-light sm:h-32 sm:w-32", children: [_jsx("span", { className: "absolute -top-4 -right-2 h-16 w-16 rounded-full bg-white/25", "aria-hidden": true }), _jsx("span", { className: "font-script text-xl sm:text-2xl font-bold text-cov-orange-dark transition-transform duration-300 group-hover:scale-110", children: "Click Here" })] }));
+    return (_jsxs("section", { className: "cov-banner relative overflow-hidden rounded-[28px] px-6 py-6 sm:px-10 sm:py-8 text-white shadow-[0_18px_40px_-18px_rgba(232,85,30,0.55)]", "aria-label": title, children: [_jsx("span", { className: "pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-white/10", "aria-hidden": true }), _jsx("span", { className: "pointer-events-none absolute top-6 left-24 h-8 w-8 rounded-full bg-white/15", "aria-hidden": true }), _jsxs("div", { className: "relative flex items-center justify-between gap-4", children: [_jsxs("div", { className: "flex items-center gap-4 sm:gap-8", children: [visual && _jsx("div", { className: "hidden sm:block shrink-0", children: visual }), _jsxs("div", { className: "flex flex-col gap-1", children: [_jsx("h2", { className: "font-script text-3xl sm:text-4xl md:text-[44px] font-bold leading-tight drop-shadow-sm", children: title }), subtitle && _jsx("p", { className: "text-sm sm:text-[15px] font-medium text-white/85", children: subtitle })] })] }), href ? (_jsx("a", { href: href, className: "shrink-0", "aria-label": title, children: CTA })) : (CTA)] }), _jsx(ArrowRight, { className: "absolute bottom-4 right-40 h-4 w-4 opacity-40", "aria-hidden": true })] }));
+}
